@@ -32,6 +32,25 @@ class ViewController: UIViewController {
     dogYearsLabel.text = "\(convertedYears) in Dog Years"
   }
   
+  @IBAction func convertToRealDogYearsButtonPress(sender: UIButton) {
+    let intHumanYears = humanYearsTextField.text.toInt()!
+    let conversionFirstDogYears = 10.5
+    let conversionLaterDogYears = 4
+    var firstYears = 0
+    var laterYears = 0
+    
+    if intHumanYears > 2 {
+      firstYears = 2
+      laterYears = intHumanYears - 2
+    }
+    else {
+      firstYears = intHumanYears
+    }
+    
+    let convertedYears = (Double(firstYears) * conversionFirstDogYears) + Double(laterYears * conversionLaterDogYears)
+    dogYearsLabel.hidden = false
+    dogYearsLabel.text = "\(convertedYears) in Real Dog Years"
+  }
 
 }
 

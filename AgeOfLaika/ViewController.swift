@@ -47,7 +47,8 @@ class ViewController: UIViewController {
       firstYears = intHumanYears
     }
     
-    let convertedYears = (Double(firstYears) * conversionFirstDogYears) + Double(laterYears * conversionLaterDogYears)
+    let convertedYears = (Double(firstYears) * conversionFirstDogYears) +
+                          Double(laterYears * conversionLaterDogYears)
     dogYearsLabel.hidden = false
     dogYearsLabel.text = "\(convertedYears) in Real Dog Years"
   }
